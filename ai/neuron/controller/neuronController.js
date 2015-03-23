@@ -52,7 +52,7 @@ neuron.controller('neuronController', ['$scope', function($scope) {
         $scope.goals = [];
         var v;
         var io;
-        if($scope.ao){v = $scope.and;}else{v = $scope.or;}
+        if($scope.ao == "and"){v = $scope.and;}else{v = $scope.or;}
         var input = [$scope.a,$scope.b,1];
         for(var i = 0; i < 4; i++){
             io = v[i];
