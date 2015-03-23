@@ -51,10 +51,11 @@ neuron.controller('neuronController', ['$scope', function($scope) {
     $scope.learnedFunction = function(){
         $scope.goals = [];
         var v;
+        var io;
         if($scope.ao){v = $scope.and;}else{v = $scope.or;}
         var input = [$scope.a,$scope.b,1];
         for(var i = 0; i < 4; i++){
-            var io = v[i];
+            io = v[i];
             console.log($scope.scalarProduct($scope.w,io));
             $scope.goals.push({'res': $scope.sigmoid($scope.scalarProduct($scope.w,io)), 'exp':io[3]});
         }
