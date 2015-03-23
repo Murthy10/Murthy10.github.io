@@ -1,0 +1,17 @@
+<h1>Perceptron</h1>
+<div class="pull-right"><img src="/img/perceptron.png"></div>
+</br>
+<form name="steps">
+    <input type="radio" ng-model="ao" value="and"> AND<br/>
+    <input type="radio" ng-model="ao" value="or"> OR<br/>
+    <input type="number" name="input" ng-model="steps" placeholder="Steps.."/>
+    <input type="submit" name="button" value="Learn!" ng-click="learn()"/>
+    </br>
+    <div ng-repeat="r in goals">
+        </br>Result: {{r.res}} </br>
+        Expected: {{r.exp}}
+    </div>
+</form>
+
+
+
