@@ -5,12 +5,14 @@ var hours = currentTime.getHours();
 var minutes = currentTime.getMinutes();
 
 var isOpen = function(){
-	if(dayOfWeek == 0){
+	if(dayOfWeek == 6){
 		return ture;
-	}else if(dayOfWeek == 1){
+	}else if(dayOfWeek == 0){
 		return true;
-	}else if(dayOfWeek == 6 && hours >= 17){
-		return false;
+	}else if(dayOfWeek == 5 && hours >= 17){
+		return true;
+	}else{
+		false;
 	}
 	
 };
